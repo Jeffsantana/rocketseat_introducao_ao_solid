@@ -9,7 +9,7 @@ class ListAllUsersUseCase {
   constructor(private usersRepository: IUsersRepository) { }
 
   execute({ user_id }: IRequest): User[] {
-    const verifyUserExist = this.usersRepository.verifyAdmin(user_id);
+    // const verifyUserExist = this.usersRepository.verifyAdmin(user_id);
     const users = this.usersRepository.list();
     return users;
   }
